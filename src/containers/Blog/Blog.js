@@ -36,6 +36,7 @@ class Blog extends Component {
                          }}
                          >New Post
                          </NavLink>
+                        
                          </li>
                      </ul>
                  </nav>
@@ -43,6 +44,7 @@ class Blog extends Component {
 
 
              <Route path="/" exact component={Posts} />
+             <Route path="/:id" exact component={FullPost} />
              <Route path="/new-post"  component={NewPost} />
                
             </div>
