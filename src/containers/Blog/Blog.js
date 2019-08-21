@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import axios from '../../axios';
-import { BrowserRouter as Router, Route, Link,NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch,Route, Link,NavLink } from "react-router-dom";
 import Post from '../../components/Post/Post';
 import FullPost from './FullPost/FullPost';
 import Posts from './Posts/Posts';
@@ -42,10 +42,12 @@ class Blog extends Component {
                  </nav>
              </header>
 
-
-             <Route path="/" exact component={Posts} />
-             <Route path="/fullpost/:id" exact component={FullPost} />
-             <Route path="/new-post"  exact component={NewPost} />
+                    <Switch>
+                                <Route path="/" exact component={Posts} />
+                                <Route path="/fullpost/:id" exact component={FullPost} />
+                                <Route path="/new-post"  exact component={NewPost} />
+                    </Switch>
+             
                
             </div>
         );
