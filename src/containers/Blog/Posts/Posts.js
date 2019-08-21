@@ -35,11 +35,12 @@ class  Posts extends Component {
     }
 
     render() { 
+       
         let posts = <p style={{textAlign: 'center'}}>Something went wrong!</p>;
         if (!this.state.error) {
             posts = this.state.posts.map(post => {
                 return (<Link 
-                    to = {'/'+post.id}
+                    to = {'/fullpost/'+post.id}
                     key={post.id} 
                 ><Post 
                    
